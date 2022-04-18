@@ -1,6 +1,6 @@
 
 DELIMITER //
-CREATE PROCEDURE SynchronizeFromRemote(
+CREATE PROCEDURE SynchronizeWithRemote(
     IN remote VARCHAR(255),
     IN branch VARCHAR(255)
 )
