@@ -30,7 +30,7 @@ dolt sql < create-sync-procedure.sql
 dolt sql-server 
 ```
 
-In a separate terminal, launch the synchronization script to synchronize the Dolt DB SQL instance with the ```main``` branch on the ```origin``` remote (i.e. DoltHub):
+In a separate terminal, launch the synchronization script to synchronize the Dolt DB SQL instance with the ```main``` branch on the ```origin``` remote (i.e. DoltHub) every 2 minutes:
 ```shell
 ./sync-remotes.sh
 ```
