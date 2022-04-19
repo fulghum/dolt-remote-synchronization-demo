@@ -3,7 +3,8 @@
 while true; do
     echo "Synchronizing remotes..."
     mysql --protocol TCP -u root -e "CALL SynchronizeWithRemote('origin', 'main');" test
-    sleep 2 * 60
+    # Attempt to synchronize every 10 seconds. Change this value to experiment with different sync cycles.
+    sleep 10
 done
 
 

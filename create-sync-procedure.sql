@@ -6,8 +6,7 @@ CREATE PROCEDURE SynchronizeWithRemote(
 )
 BEGIN
 select dolt_fetch(remote, branch);
-select dolt_merge(CONCAT(remote, "/", branch));
+select dolt_merge('--no-ff', CONCAT(remote, "/", branch));
 select dolt_commit('-am', "Merging DoltHub Configuration Changes");
-select dolt_push(remote);
-END //
+select dolt_push(remote);END //
 DELIMITER ;
